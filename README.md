@@ -1,7 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 ## Uber Clone
 # Preview
-<img src="https://i.gyazo.com/d5fa28b4af45e769029c420f5c6be479.png" width="200px" height="400px">
+<img src="https://i.gyazo.com/d5fa28b4af45e769029c420f5c6be479.png" width="200px" height="340px">
 ## Getting Started
 
 First, run the development server:
