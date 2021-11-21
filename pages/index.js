@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import tw from "tailwind-styled-components"
 import Map from './components/Map'
-
+import Link from 'next/link'
 
 
 
@@ -26,10 +26,14 @@ export default function Home() {
         {/* ActionButtons */}
 
         <ActionButtons> 
+
+          {/* importing this Link from next/link */}
+            <Link href="search">
             <ActionButton>
               {/* self closing tag */}
                   <ActionButtonImage src="https://i.ibb.co/cyvcpfF/uberx.png"/>
               Ride</ActionButton>
+            </Link>
             <ActionButton>
                  <ActionButtonImage src="https://i.ibb.co/n776JLm/bike.pngg"/> 
               Wheels</ActionButton>
