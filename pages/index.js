@@ -1,14 +1,36 @@
-import {useEffect} from 'react'
-import Head from 'next/head'
-import Image from 'next/image'
+import {useEffect, useState} from 'react'
 import tw from "tailwind-styled-components"
-import Map from './components/Map'
 import Link from 'next/link'
 
+import Map from './components/Map'
+import {auth} from '../firebase'
+import { onAuthStateChanged, signOut } from '@firebase/auth'
+import router, { useRouter } from 'next/router'
 
 
 export default function Home() {
+  const [user, setuser] = useState(null)
+  const router = useRouter();
 
+    useEffect(() => {
+      return onAuthStateChanged(auth, user =>{ // listener for whether or not user is logged in or not
+        if (user){
+          setuser({
+            name: user.displayName,
+            photoUrl: user.photoURL,
+
+          })
+        }
+        else{
+          setuser(null)
+
+          router.push('/login')
+        }
+
+      })
+
+
+    }, [])
 
 
   return (
@@ -19,8 +41,8 @@ export default function Home() {
         <Header>  
               <UberLogo  src="https://i.ibb.co/84stgjq/uber-technologies-new-20218114.jpg"/>
               <Profile>
-                  <Name>Marvin Vilaysack</Name>
-                  <UserImage src="https://i.ibb.co/qkDVMxW/801259de7ccf9cad11174daf212481c4-1-1.png"/>
+                  <Name>{user && user.name}</Name>
+                  <UserImage src={user && user.photoUrl} onClick={() => signOut(auth)}/>
               </Profile>
         </Header>
         {/* ActionButtons */}
@@ -50,6 +72,8 @@ export default function Home() {
     </Wrapper>
   )
 }
+
+
 const Wrapper = tw.div`
   flex flex-col h-screen 
 
@@ -76,7 +100,7 @@ mr-4 w-20
 
 `
 const UserImage = tw.img `
-  h-20 rounded-full border border-gray-200 p-2
+  h-20 rounded-full border border-gray-200 p-2 cursor-pointer
 
 `
 
