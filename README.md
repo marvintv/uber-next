@@ -27,4 +27,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Map is provided by Mapbox API
 - Ride Selection page
 - User is directed to a page where they can enter in a pickup/dropoff location
-- Calculates ride fares based on locations entered by user. User has options to select on which type of ride they want. 
+- Calculates ride fares based on locations entered by user. User has options to select on which type of ride they want to proceed with.
+
