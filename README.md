@@ -3,7 +3,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 # Preview
 
-Tech stack: Next.js, Tailwind, Firebase.io, Mapbox
+Next JS, React JS, Tailwind CSS and Firebase
+
 Link: https://uber-clone-marvin.netlify.app/
 
 
