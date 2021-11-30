@@ -1,8 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 ## Uber Clone 
 
-# Preview
-
 Next JS, React JS, Tailwind CSS and Firebase
 
 ## Deployment link: https://uber-next-zeta.vercel.app
